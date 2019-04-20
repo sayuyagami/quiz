@@ -98,7 +98,7 @@
     <b><a class ="sqr" style="background-color:#c0c0c0" href="registration.php">Sign up</a></b>
     </center>
   </div><br>
-  <div class="container">
+  <!--<div class="container">
     <form action=" " method="post">
       <div style="margin:5px">
         <h3>Leave your comment : </h3>
@@ -106,10 +106,10 @@
         <input type="text" name="comments" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%;height: 100px" placeholder="comment here....." value="" required />
       </div><br>
       <input style="margin: 1px auto" type="submit" class="btn btn-primary" name="comment-btn" value="Send"><br><br>
-    </form>
+    </form>-->
   
     <?php 
-     include ("connect.php");
+     /*include ("connect.php");
         
          $query="select * from comment";
          $q1=mysqli_query($con,$query);
@@ -160,9 +160,9 @@
                 </div><br>
                 <?php
             }
-        }    
+        } */   
    ?>
-  </div> 
+  <!--</div> -->
   <div id="disqus_thread"></div>
 <script>
 
