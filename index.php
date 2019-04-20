@@ -60,12 +60,13 @@
         </div>   
     </div>  
   </div>
-  
+    <form action="" method="post">
     <div class="box">
       <h3>Subscribe Here...!!</h3>
-      <input type="email" name="email" style="width: 80%;height:38px;border-radius: 5px;margin: 10px" placeholder="Email address...." />
-      <button type="submit" class="btn btn-danger">Subscribe</button>
+      <input type="email" name="email" style="width: 80%;height:38px;border-radius: 5px;margin: 10px" placeholder="Email address...." required />
+      <input type="submit" class="btn btn-danger" name="subscribe" value="Subscribe" />
     </div>
+    </form>
   <div style="background-color:#fff" class="container">
     <h2>About us</h2>
 
@@ -98,7 +99,7 @@
     <b><a class ="sqr" style="background-color:#c0c0c0" href="registration.php">Sign up</a></b>
     </center>
   </div><br>
-  <!--<div class="container">
+  <div class="container">
     <form action=" " method="post">
       <div style="margin:5px">
         <h3>Leave your comment : </h3>
@@ -106,10 +107,51 @@
         <input type="text" name="comments" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%;height: 100px" placeholder="comment here....." value="" required />
       </div><br>
       <input style="margin: 1px auto" type="submit" class="btn btn-primary" name="comment-btn" value="Send"><br><br>
-    </form>-->
-  
+    </form>
+    <?php
+      $conn=mysqli_connect("localhost","bindhu","@nime123","login");
+      if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['subscribe']) && !empty($_POST['subscribe']))
+      {
+        $email=$_POST['email'];
+        if(!filter_var($email,FILTER_VALIDATE_EMAIL))
+        { 
+          ?>
+          <div class="alert alert-success alert-dismissible">
+  				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  			   Invalid email
+			    </div>
+          <?php
+        }
+        else
+        {?>
+          <div class="alert alert-success alert-dismissible">
+  				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  				  check your mail to confirm your subscription
+          </div>  
+          <?php   
+          mysqli_query($conn,"INSERT INTO `subscribers`(`email`) VALUES ('$email)") or die("failed".mysqli_error($conn));
+        
+          $to      = $email; // Send email to our user
+          $subject = ' Quiz Time | Confirmation '; // Give the email a subject 
+          $message = '
+ 
+          Thanks for subscribing to our website !
+
+          You will receive notifications to your mail whenever there is an new posts available.We will notify you about every updates of our website.
+          ------------------------
+          email: '.$email.'
+          ------------------------
+ 
+          Please click this link to confirm your subscription:
+          https://www.quizproject.tk '// Our message above including the link
+                     
+          $headers = 'From:QuizTime11@gmail.com' . "\r\n"; // Set from headers
+          mail($to, $subject, $message, $headers); // Send our email   
+        }
+      }            
+    ?>
     <?php 
-     /*include ("connect.php");
+     include ("connect.php");
         
          $query="select * from comment";
          $q1=mysqli_query($con,$query);
@@ -160,30 +202,29 @@
                 </div><br>
                 <?php
             }
-        } */   
+        }
    ?>
-  <!--</div> -->
-  <div id="disqus_thread"></div>
-<script>
+  </div>
+  <!--<div id="disqus_thread"></div>
+<script>-->
 
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
-var disqus_config = function () {
+/*var disqus_config = function () {
 this.page.url = quizproject.tk;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = quizproject-tk; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
+//this.page.identifier = quizproject-tk; // Replace PAGE_IDENTIFIER with your page's unique identifier variable};
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://quizproject-tk.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <script id="dsq-count-scr" src="//quizproject-tk.disqus.com/count.js" async></script>
+//(function() { // DON'T EDIT BELOW THIS LINE
+//var d = document, s = d.createElement('script');
+//s.src = 'https://quizproject-tk.disqus.com/embed.js';
+//s.setAttribute('data-timestamp', +new Date());
+//(d.head || d.body).appendChild(s);
+//})();*/
+//</script>
+//<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+//<script id="dsq-count-scr" src="//quizproject-tk.disqus.com/count.js" async></script>
   <!--<a href="#" id="totop" style="display:block;"><span id="totophover" style="opacity: 0"></span>To top</a>-->
 </body>
 <footer style="margin-top:50px" class="w3-center w3-black w3-padding-32">
