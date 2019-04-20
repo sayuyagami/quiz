@@ -1,8 +1,5 @@
 <?php 
- $con=mysqli_connect("localhost","root","","quizdb");
- if(!$con){
-	echo "failed connection";
-}
+ include ("connect.php");
 ?>
 <html>
 <head>

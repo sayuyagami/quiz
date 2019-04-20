@@ -45,7 +45,7 @@
     ?>
     <h2><?php echo $quizname; ?>Questions</h2>
     <?php
-         $con=mysqli_connect('localhost','root','','quizdb');
+         include ("connect.php");
          //session_start();
          $sql="select `qid` from $questions";
          $res=mysqli_query($con,$sql) or die("failed".mysqli_error($con));

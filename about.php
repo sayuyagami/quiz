@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="style.css">
   
@@ -122,10 +123,10 @@
   </div><br><br><br> 
 </body>   
 <footer class="w3-center w3-black w3-padding-32">
-    <i style="color:#c0c0c0">supported by &nbsp;</i><a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;
-    <a href="#" class="fa fa-twitter"></a>&nbsp;&nbsp;
-    <a href="#" class="fa fa-google"></a>&nbsp;&nbsp;
-    <a href="#" class="fa fa-instagram"></a><br> 
+    <i style="color:#c0c0c0">supported by &nbsp;</i><a href="#" class="fab fa-facebook-f"></a>&nbsp;&nbsp;
+    <a href="#" class="fab fa-twitter"></a>&nbsp;&nbsp;
+    <a href="#" class="fab fa-google"></a>&nbsp;&nbsp;
+    <a href="#" class="fab fa-instagram"></a><br> 
     <i style="color:#c0c0c0">&copy; All rights are reserved | Design by @nonymous_.1</i>
 </footer>
 </html>     

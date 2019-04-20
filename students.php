@@ -58,7 +58,7 @@
     <?php 
      //connect to login database
 
-     $conn=mysqli_connect("localhost", "root", "","login") or die(mysqli_error($conn));
+     $conn=mysqli_connect("localhost", "bindhu","@nime123","login") or die(mysqli_error($conn));
      $query="SELECT * FROM `info`";
      $result=mysqli_query($conn,$query);
     ?>

@@ -47,8 +47,7 @@
         ?>
 		<br><h2><?php echo $quizname; ?> Quiz Results</h2><br>
 		<?php
- 		$con=mysqli_connect('localhost','root');
- 		mysqli_select_db($con,'quizdb');
+ 		include ("connect.php");
  		$sql ="SELECT * FROM $users";
  		$query=mysqli_query($con,$sql);
  		?>

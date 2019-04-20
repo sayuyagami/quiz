@@ -101,7 +101,9 @@
   <div class="container">
     <form action=" " method="post">
       <div style="margin:5px">
-        <input type="text" name="comments" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%;height: 100px" placeholder=" publise your comment....." value="" required />
+        <h3>Leave your comment : </h3>
+        <input type="text" name="name" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%" placeholder="your name..." value="" required />
+        <input type="text" name="comments" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%;height: 100px" placeholder="comment here....." value="" required />
       </div><br>
       <input style="margin: 1px auto" type="submit" class="btn btn-primary" name="comment-btn" value="Send"><br><br>
     </form>
@@ -133,9 +135,10 @@
     ?>
     <?php 
       include ("connect.php");
-      if(isset($_POST['comment-btn']) && !empty($_POST['comment-btn']) && isset($_POST['comments']) && !empty($_POST['comments'])){
+      if(isset($_POST['comment-btn']) && !empty($_POST['comment-btn']) && isset($_POST['name']) && !empty($_POST['name'])&& isset($_POST['comments']) && !empty($_POST['comments'])){
+         $name=$_POST['name'];
          $comm=$_POST['comments'];
-         $sql="INSERT INTO `comment`(`name`,`comment`) VALUES ('user','$comm')";
+         $sql="INSERT INTO `comment`(`name`,`comment`) VALUES ('$name','$comm')";
          $q=mysqli_query($con,$sql) or die("failed".mysqli_error($con));
          
          $query="select * from comment";

@@ -3,8 +3,9 @@ include('funct.php');
 if(!isset($_SESSION['username']))
 {
  header("location:login.php");
-}
- $con=mysqli_connect('localhost','root','','quizdb');
+}else{
+  include ("connect.php");
+} 
 ?>
 
 <html>

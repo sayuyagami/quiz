@@ -2,7 +2,7 @@
 	session_start();
 
 	// connect to database
-	 $conn=mysqli_connect("localhost", "root", "","login") or die(mysqli_error($conn)); // Connect to database server(localhost) with 
+	 $conn=mysqli_connect("localhost", "bindhu","@nime123","login") or die(mysqli_error($conn)); // Connect to database server(localhost) with 
 	
     // call the register() function if register_btn is clicked
 	if (isset($_POST['register_btn'])) {

@@ -17,7 +17,7 @@
     {
        header("location:login.php");
     }else{
-      $con=mysqli_connect('localhost','root','','quizdb');
+      include ("connect.php");
     }
  
     if(!isset($_SESSION['score'])){
