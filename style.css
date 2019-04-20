@@ -149,6 +149,10 @@ input[type=submit]:hover {
     width:90%;
     padding-bottom: 65px;   
   }
+  #subscribe-btn{
+   width:20%;
+   padding: 5px;
+  }
 }
 
 .textbox{
