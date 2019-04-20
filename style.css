@@ -1,0 +1,264 @@
+*{ 
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.wrap input[type="text"],input[type="password"]
+    { 
+      color: #fff;
+      border:none;
+      background: transparent;
+      border-bottom: 1px solid #000;
+      outline:none;
+      height:40px;
+      width: auto;
+    } 
+
+.wrap{
+  margin-top: 20px;  
+  padding:30px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 80px auto;
+  background: #343a4057;
+  width:550px;
+}
+
+.w3-black
+{
+  background-color: #242526 !important;
+}   
+
+.card-body:hover{
+  background-color:#c0c0c0;
+}
+
+.box{
+  padding:10px; 
+  color:#fff;
+  background-color:#000;
+  text-align: center; 
+}
+
+a.sqr{
+  color:#000;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #17de4b7a;
+  border-radius: 20%;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+a.sqr:hover{
+  padding: 20px;
+}
+
+i.box{
+  border-radius: 5px;
+  padding:5px; 
+  background-color: #474c521f;
+  color:#000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  opacity: 10;
+}
+
+#footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}
+
+/* Style the container/contact section */
+.container {
+  margin-top:20px; 
+  border-radius: 5px;
+  background-color: #343a4057;
+  padding: 10px;
+  opacity: 0.9;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  .textbox{
+    top:50px;
+    margin-top: 220px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 5px 10px 18px #888888;
+  }
+ 
+  .home-title{
+    margin-top: 230px;
+   } 
+
+  .container{
+    margin-top: 20px;
+    width:90%;
+    margin-bottom: 20px;
+  }
+  .wrap{
+    margin-top: 20px;
+    width:90%;
+    padding-bottom: 65px;   
+  }
+}
+
+.textbox{
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding:10px;
+  border-radius: 5px;
+  opacity:0.7;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.col{
+  margin-top: 180px;
+}
+
+#totop{
+  display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 79px;
+    right: 2%;
+    overflow: hidden;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+    border: none;
+    text-indent: 100%;
+    background: url("https://www.shareicon.net/download/128x128//2015/10/06/113446_arrow_512x512.png=img.png") no-repeat 0px 0px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+
+}
+#toTopHover {
+    width: 32px;
+    height: 32px;
+    display: block;
+    overflow: hidden;
+    float: right;
+ }   
+
+.bg1{
+  border:1px solid #a442f4;
+  background-color: #a442f4;
+  padding: 50px;
+  color:#fff;
+}
+.bg2{
+  border:1px solid #dbd220;
+  background-color: #dbd220;
+  padding: 50px;
+  color:#fff;
+}
+.bg3{
+  border:1px solid #4286f4;
+  background-color: #4286f4;
+  padding: 50px;
+  color:#fff;
+}
+.bg4{
+  border:1px solid #0cb517;
+  background-color: #0cb517;
+  padding: 50px;
+  color:#fff;
+}
+.num-color1,.num-color2,.num-color3,.num-color4{
+  border:1px solid #a442f4;
+  color:#a442f4;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 2em;
+  font-weight: 600;
+  position: absolute;
+  left: 0px;
+  margin:6px;
+  top: -29px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+}
+.num-color2{
+ border:1px solid #dbd220; 
+ color:#dbd220; 
+}
+.num-color3{
+  border:1px solid #4286f4; 
+ color:#4286f4; 
+}
+.num-color4{
+   border:1px solid #0cb517; 
+ color:#0cb517;
+}
+.bg1,.bg2,.bg3,.bg4{
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.bg1:hover,.bg2:hover,.bg3:hover,.bg4:hover{
+  box-shadow: 5px 10px 18px #c0c0c0;
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/loader.gif) center no-repeat #fff;
+}
