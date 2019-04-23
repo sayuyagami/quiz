@@ -62,7 +62,7 @@
 			//$query = "SELECT * FROM info WHERE username='$username' AND password='$password' ";
 			if($rows['username']==$username && $rows['password']==$password) {           
 			          if ($rows['type'] == 'admin') {
-						  $_SESSION['type']=$rows['type'];
+						  $_SESSION['type']= admin;
 			          	  $_SESSION['username']=$username;
 					      header('location: admin.php');		  
 			          

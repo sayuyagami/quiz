@@ -1,10 +1,11 @@
 <?php
 include('funct.php');
-if(!isset($_SESSION['username']))
+if(!isset($_SESSION['type']) && empty($_SESSION['type']))
 {
  header("location:login.php");
 }else{
- include ("connect.php");
+  $uname=$_SESSION['username'];
+  include ("connect.php");
 }
 ?>
 

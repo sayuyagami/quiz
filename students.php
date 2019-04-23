@@ -1,6 +1,6 @@
 <?php
 include('funct.php');
-if(!isset($_SESSION['username']) && !isset($_SESSION['type']))
+if(!isset($_SESSION['type']) && empty($_SESSION['type']))
 {
  header("location:login.php");
 }else{
