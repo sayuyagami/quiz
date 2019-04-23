@@ -29,11 +29,11 @@ if(!isset($_SESSION['username']))
 
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="admin.php"><i class="fa fa-fw fa-home"></i> Home </a>
+          <a class="nav-link" href="home.php"><i class="fa fa-fw fa-home"></i> Home </a>
         </li>
       </ul>
     </div>
-    <a style="margin-left:auto" class="btn btn-success" href="login.php"> LOGOUT </a>
+    <a style="margin-left:auto" class="btn btn-success" href="logout.php"> LOGOUT </a>
   </nav><br><br>
    <div class = "col-lg-5 col-md-8 m-auto">    
      <br><i><h1 class="text-center text-primary">"Welcome to Quiz World",<?php echo $_SESSION['username']; ?></h1></i><br><br><br>

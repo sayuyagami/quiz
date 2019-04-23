@@ -22,7 +22,7 @@
   </style>
 </head>
 <body>
-  <div class="se-pre-con" style="display: none;"></div>
+  <div class="loader" style="display: none;"></div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"><i style="color:#00ff00;font-size:30px">Q</i><i style="color:#00ffff">uiz</i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -178,7 +178,7 @@
         }
    ?>
   </div>
-  <div id="disqus_thread"></div>
+  <!--<div id="disqus_thread"></div>-->
 <!--<script>
 
 /**

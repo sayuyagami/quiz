@@ -1,8 +1,10 @@
 <?php
 include('funct.php');
-if(!isset($_SESSION['username']))
+if(!isset($_SESSION['username']) && !isset($_SESSION['type']))
 {
  header("location:login.php");
+}else{
+  $uname=$_SESSION['username'];
 }
 ?>
 
@@ -66,7 +68,7 @@ if(!isset($_SESSION['username']))
 
     <div class="alert alert-info alert-dismissible">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <strong>Welcome Admin !! </strong>
+      <strong>Welcome <?php echo $uname; ?> !! </strong>
     </div><br><br> 
     <div class="w3-default w3-hover-shadow w3-center">
   	  <a href="addques.php?ques=questions&ans=answers" style="text-decoration: none"><i style="font-size: 20px">Add questions to the HTML Quiz  >> </i></a>
