@@ -49,7 +49,7 @@
                  {
 				   $code = rand(0,10000);
 				   $hash = md5( rand(0,1000) );	 
-                   mysqli_query($conn,"INSERT INTO info (username, password, email,hash,code,type) VALUES('".$uname."', '".(md5($pass))."','".$email."','".$hash."','".$code."','user') ") or die(mysqli_error($conn));
+                   mysqli_query($conn,"INSERT INTO info (username, password, email,hash,code,type) VALUES('".$uname."', '".$pass."','".$email."','".$hash."','".$code."','user') ") or die(mysqli_error($conn));
 				 }
 		      ?>
 	          <div class="alert alert-success">
@@ -63,33 +63,33 @@
     
 	// LOGIN USER
 	function login(){
-		global $conn, $username, $password;
-
+	 global $conn,$username,$password;
+	 
 		if(isset($_POST['username']) && !empty($_POST['username']) AND isset($_POST['password']) && !empty($_POST['password'])){
    			 $username = $_POST['username']; // Turn our post into a local variable
     	     $password = md5($_POST['password']); // Turn our post into a local variable
    			 $sql ="SELECT * FROM `info` WHERE `username`='$username' AND `password`='$password'";
              $results=mysqli_query($conn,$sql);
-             $rows =mysqli_fetch_array($results);
+			 $rows =mysqli_fetch_array($results);
 			//$query = "SELECT * FROM info WHERE username='$username' AND password='$password' ";
-			if($rows['username']==$username && $rows['password']==$password) {           
-			          if ($rows['type'] == 'admin') {
-						  $_SESSION['type']= admin;
-			          	  $_SESSION['username']=$username;
-					      header('location: admin.php');		  
+			if($rows['username']==$username && $rows['password']==$password) {
+			    if ($rows['type'] == 'admin') {
+					$_SESSION['type'] = admin;
+			        $_SESSION['username']=$username;
+					header('location: admin.php');		  
 			          
-			           }else if($rows['type'] =='user'){
- 					       $_SESSION['username']=$username;
-					       header('location: home.php');
-		                }
-		    }else{
-			 	    ?>
-				    <div class="alert alert-success alert-dismissible fade show">
-    					<button type="button" class="close" data-dismiss="alert">&times;</button>
-    					<strong>invalid password !!</strong>
-  					</div>
-		            <?php    
+			    }else if($rows['type'] =='user'){
+ 					$_SESSION['username']=$username;
+					header('location: home.php');
 		        }
+		    }else{
+			 	?>
+				<div class="alert alert-success alert-dismissible fade show">
+    			<button type="button" class="close" data-dismiss="alert">&times;</button>
+    			<strong> invalid password !!</strong>
+  				</div>
+		        <?php    
+		    }
         }
     }
 ?>

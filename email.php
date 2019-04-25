@@ -83,7 +83,7 @@
           ------------------------
 
           To change the password click the below link:
-          https://www.quizproject.tk/change.php?email='.$email.'&hash='.$hash.'
+          http://localquizproject.tk/change.php?email='.$email.'&hash='.$hash.'
           '; // Our message above including the link
                      
           $headers = 'From: QuizTime11@gmail.com' . "\r\n";
