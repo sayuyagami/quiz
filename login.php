@@ -66,7 +66,7 @@
   </div>
   <!--end login form-->
 </body> 
-<footer id="footer" class="w3-center w3-black w3-padding-32">
+<footer style="margin-top:250px" id="footer" class="w3-center w3-black w3-padding-32">
   <i style="color:#c0c0c0">supported by &nbsp;</i><a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;
   <a href="#" class="fa fa-twitter"></a>&nbsp;&nbsp;
   <a href="#" class="fa fa-google"></a>&nbsp;&nbsp;
