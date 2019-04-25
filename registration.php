@@ -17,7 +17,7 @@
      body{
           background:url("https://c-parity.com/wp-content/uploads/2017/02/claims-background.jpg");
           background-position: fixed;
-          background-size:cover;
+          background-size:center;
         }  
 
   </style>

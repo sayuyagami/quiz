@@ -16,7 +16,7 @@
   <style>
    body{
           background:url("https://img1.goodfon.com/wallpaper/nbig/b/31/abstract-colors-background-7311.jpg");
-         
+          background-size:center;
           background-position: fixed;
     }  
   </style>
