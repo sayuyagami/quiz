@@ -19,7 +19,6 @@
           background-size: cover;
           background-position: fixed;
         }  
-
   </style>
 </head>
 <body>
@@ -55,7 +54,7 @@
     //onclick submit
     if(isset($_POST['submit']) && !empty($_POST['submit'])){
       $name=$_POST['uname'];
-      $email=$_POST['email'];
+      $email=$_POST['email1'];
       $text=$_POST['subject'];
 
       //insert data into contact table
@@ -79,9 +78,9 @@
       <div class="column">
         <form action="contact.php" method="post">
           <label style="color:#fff">Name</label><br>
-          <input style='width:100%' type="text" name="uname" placeholder="Your name.."><br><br>
+          <input style='width:100%' type="texts" name="uname" placeholder="Your name.."><br><br>
           <label style="color:#fff;width: 100%">Email</label><br>
-          <input style='width:100%' type="email" name="email" placeholder="@gmail.com.."><br><br>
+          <input style='width:100%' type="email" name="email1" placeholder="@gmail.com.."><br><br>
           <label style="color:#fff">Subject</label><br>
           <textarea name="subject" placeholder="Send us feedback....." style="height:170px"></textarea>
           <input type="submit" name="submit" class="btn btn-success" value="Submit">

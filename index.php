@@ -22,7 +22,7 @@
   </style>
 </head>
 <body>
-  <div class="loader" style="display: none;"></div>
+  
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#"><i style="color:#00ff00;font-size:30px">Q</i><i style="color:#00ffff">uiz</i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,8 +117,8 @@
     <form action=" " method="post">
       <div style="margin:5px">
         <h3>Leave your comment : </h3>
-        <input type="text" name="name" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%" placeholder="your name..." value="" required />
-        <input type="text" name="comments" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%;height: 100px" placeholder="comment here....." value="" required />
+        <input type="texts" name="name" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%" placeholder="your name..." value="" required />
+        <input type="texts" name="comments" style="font-family:sans-serif;font-size:1.2em;padding:2px;width:100%;height: 100px" placeholder="comment here....." value="" required />
       </div><br>
       <input style="margin: 1px auto" type="submit" class="btn btn-primary" name="comment-btn" value="Send"><br><br>
     </form>
@@ -178,28 +178,6 @@
         }
    ?>
   </div>
-  <!--<div id="disqus_thread"></div>-->
-<!--<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url = quizproject.tk;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = quizproject-tk; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://quizproject-tk.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <script id="dsq-count-scr" src="//quizproject-tk.disqus.com/count.js" async></script>-->
-  <!--<a href="#" id="totop" style="display:block;"><span id="totophover" style="opacity: 0"></span>To top</a>-->
 </body>
 <footer style="margin-top:50px" class="w3-center w3-black w3-padding-32">
   <i style="color:#c0c0c0">supported by &nbsp;</i><a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;

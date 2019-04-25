@@ -5,7 +5,7 @@ if(!isset($_SESSION['username']))
  header("location:login.php");
 }else{
   include ("connect.php");
-} 
+}
 ?>
 
 <html>

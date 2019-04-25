@@ -20,8 +20,9 @@
 	
         // Select registrations database.
  
-    	if(isset($_POST['username']) && !empty($_POST['username']) AND isset($_POST['password']) && !empty($_POST['password'])){
-        	$uname = $_POST['username'];
+    	if(isset($_POST['username']) && !empty($_POST['username']) AND isset($_POST['email']) && !empty($_POST['email']) AND isset($_POST['password']) && !empty($_POST['password'])){
+			$uname = $_POST['username'];
+			$email = $_POST['email'];
 	    	$pass =md5($_POST['password']);
 			$sql ="SELECT `username` FROM `info` WHERE `username`='".$uname."'";
 			$result=mysqli_query($conn,$sql);
@@ -35,10 +36,21 @@
   				Username already taken.
 			  </div>
  		      <?php
-			}
-			else
-			{
-				mysqli_query($conn,"INSERT INTO info (`username`, `password`, `type`) VALUES('".$uname."', '".$pass."','user')");
+			}else{
+			     if(!filter_var($email,FILTER_VALIDATE_EMAIL))
+				 {  ?>
+				     <div class="alert alert-danger alert-dismissible">
+					  <button type="button" class="close" data-dismiss="alert">&times;</button>
+					  Invalid email
+					 </div>
+					<?php 
+                 }
+                 else
+                 {
+				   $code = rand(0,10000);
+				   $hash = md5( rand(0,1000) );	 
+                   mysqli_query($conn,"INSERT INTO info (username, password, email,hash,code,type) VALUES('".$uname."', '".(md5($pass))."','".$email."','".$hash."','".$code."','user') ") or die(mysqli_error($conn));
+				 }
 		      ?>
 	          <div class="alert alert-success">
 	        	<button type="button" class="close" data-dismiss="alert">&times;</button>

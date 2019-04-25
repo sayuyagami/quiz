@@ -15,9 +15,9 @@
 
   <style>
    body{
-          background:url("https://img1.goodfon.com/wallpaper/nbig/b/31/abstract-colors-background-7311.jpg");
-          background-size: cover;
-          background-position: fixed;
+    background:url('https://images.unsplash.com/photo-1526738549149-8e07eca6c147?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&dl=fabian-grohs-672016-unsplash.jpg=img.jpg');
+    background-repeat:no-repeat;
+    background-position:right;
     }  
   </style>
 </head>
@@ -32,6 +32,9 @@
      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="index.php"> Home </a>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" href="about.php"> About </a>
        </li>
        <li class="nav-item active">
          <a class="nav-link" href="login.php"> login <span class="sr-only">(current)</span></a>
@@ -48,22 +51,26 @@
  </nav>
 
   <!-- start wrap div -->  
-  <div class="container">   
+  <div style="margin-top:100px" class="container">   
     <!-- start php code -->
     <?php
-      $conn=mysqli_connect("localhost", "root", "") or die(mysqli_error($conn)); // Connect to database server(localhost) with username and password.
-      mysqli_select_db($conn,"login") or die(mysqli_error($conn)); // Select registrations database.
+      $conn=mysqli_connect("localhost", "bindhu","@nime123","login") or die(mysqli_error($conn)); // Connect to database server(localhost) with username and password.
  
       if(isset($_POST['email']) && !empty($_POST['email'])){
         $email = $_POST['email'];
         if(!filter_var($email,FILTER_VALIDATE_EMAIL))
-        {
-          echo '<div class ="stausmsg">email is not valid</div>';
+        {?>
+          <div class="alert alert-success alert-dismissible">
+  				<button type="button" class="close" data-dismiss="alert">&times;</button>
+  				Invalid mail
+          </div>
+          <?php
         }
         else
         {
+          $code = rand(0,10000);
           $hash = md5( rand(0,1000) );
-          mysqli_query($conn,"UPDATE `info` SET `hash`='".$hash."' WHERE `email`='".$email."') or die(mysqli_error($conn));
+          mysqli_query($conn,"UPDATE `info` SET `code`='".$code."',`hash`='".$hash."' WHERE `email`='".$email."' ") or die(mysqli_error($conn));
         
           $to      = $email; // Send email to our user
           $subject = 'Verification'; // Give the email a subject 
@@ -72,27 +79,37 @@
           you can login into your account by changing your password.
  
           ------------------------
- 
+          Verification code : '.$code.'
+          ------------------------
+
           To change the password click the below link:
-          http://localhost/511/verify.php?email='.$email.'&hash='.$hash.''; // Our message above including the link
+          http://localquizproject.tk/change.php?email='.$email.'&hash='.$hash.'
+          '; // Our message above including the link
                      
-          $headers = 'From:QuizTime11@yourwebsite.com' . "\r\n"; // Set from headers
+          $headers = 'From: QuizTime11@gmail.com' . "\r\n";
           mail($to, $subject, $message, $headers); // Send our email
-          echo '<div class ="statusmsg">check your mail the link has been sent</div>';
+        
+          header("location:verify.php?email=".$email);
         }
-      }
-             
+      }       
     ?>
+    <center>
     <!-- title and description -->
-    <h3>Verification</h3>
-    <p>Please enter your email</p>
+    <h3 style="color:#fff">Verification</h3>
+    <p style="color:#fff">Please enter your email</p>
            
     <form action="" method="post">
-      <label for="email">Email:</label>
-      <input type="text" name="email" value="" />
-             
-      <input type="submit" class="btn btn-success" value="submit" />
+      <input style="width:80%;;margin:10px" type="email" name="email" value="" placeholder="email address......."/>     
+      <input style="width:80px" type="submit" class="btn btn-success" value="submit" />
     </form>
+    </center>
   </div>
 </body>
+<footer style="position:absolute" id="footer" class="w3-center w3-black w3-padding-32">
+  <i style="color:#c0c0c0">supported by &nbsp;</i><a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;
+  <a href="#" class="fa fa-twitter"></a>&nbsp;&nbsp;
+  <a href="#" class="fa fa-google"></a>&nbsp;&nbsp;
+  <a href="#" class="fa fa-instagram"></a><br> 
+  <i style="color:#c0c0c0">&copy; All rights are reserved | Design by @nonymous_.1</i>
+</footer>
 </html>

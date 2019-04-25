@@ -17,6 +17,7 @@
      body{
           background:url("https://c-parity.com/wp-content/uploads/2017/02/claims-background.jpg");
           background-position: fixed;
+          background-size:cover;
         }  
 
   </style>
@@ -58,9 +59,10 @@
     </div>
      <form action=" " method="post">
        <i class="fa fa-user icon"></i>&nbsp;<input type="text" name="username" placeholder="username"><br><br>
+       <i class="fa fa-envelope icon"></i>&nbsp;<input type="email" name="email" placeholder="Email address"><br><br>
        <i class="fa fa-key icon"></i>&nbsp;<input type="password" name="password" placeholder="password"><br><br>
        <input type="submit" class="btn btn-success" name="register_btn" value="Register" /><br><br>
-       <i style="float:none;color: #c0c0c0">Already have an account?<a href ="login.php">Sign in</a></i>
+       <i style="float:none;color: #c0c0c0"><a href ="login.php">Already have an account? Sign in</a></i>
       </form>
   </div> 
     <!-- end wrap div -->
