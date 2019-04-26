@@ -1,6 +1,45 @@
+<?php
+  $conn=mysqli_connect("localhost", "bindhu","@nime123","login") or die(mysqli_error($conn)); // Connect to database server(localhost) with username and password.
+ 
+  if(isset($_POST['email']) && !empty($_POST['email'])){
+    $email = $_POST['email'];
+    if(!filter_var($email,FILTER_VALIDATE_EMAIL))
+    {?>
+      <div class="alert alert-success alert-dismissible">
+  		  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  			Invalid mail
+      </div>
+      <?php
+    }
+    else
+    {
+      $code = rand(0,10000);
+      $hash = md5( rand(0,1000) );
+      mysqli_query($conn,"UPDATE `info` SET `code`='".$code."',`hash`='".$hash."' WHERE `email`='".$email."' ") or die(mysqli_error($conn));
+        
+      $to      = $email; // Send email to our user
+      $subject = 'Verification'; // Give the email a subject 
+      $message = '
+ 
+      you can login into your account by changing your password.
+ 
+      ------------------------
+       Verification code : '.$code.'
+      ------------------------
+
+      To change the password click the below link:
+      http://localquizproject.tk/change.php?email='.$email.'&hash='.$hash.''; // Our message above including the link
+                     
+      $headers = 'From:QuizTime11@gmail.com' . "\r\n";
+      mail($to, $subject, $message, $headers); // Send our email
+        
+      header('Location:verify.php?email='.$email);
+    }
+  }       
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
  
-<html xmlns="http://www.w3.org/1999/xhtml">
+ <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Quiz</title>
   <meta charset="utf-8">
@@ -51,48 +90,8 @@
  </nav>
 
   <!-- start wrap div -->  
-  <div style="margin-top:100px" class="container">   
-    <!-- start php code -->
-    <?php
-      $conn=mysqli_connect("localhost", "bindhu","@nime123","login") or die(mysqli_error($conn)); // Connect to database server(localhost) with username and password.
- 
-      if(isset($_POST['email']) && !empty($_POST['email'])){
-        $email = $_POST['email'];
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL))
-        {?>
-          <div class="alert alert-success alert-dismissible">
-  				<button type="button" class="close" data-dismiss="alert">&times;</button>
-  				Invalid mail
-          </div>
-          <?php
-        }
-        else
-        {
-          $code = rand(0,10000);
-          $hash = md5( rand(0,1000) );
-          mysqli_query($conn,"UPDATE `info` SET `code`='".$code."',`hash`='".$hash."' WHERE `email`='".$email."' ") or die(mysqli_error($conn));
-        
-          $to      = $email; // Send email to our user
-          $subject = 'Verification'; // Give the email a subject 
-          $message = '
- 
-          you can login into your account by changing your password.
- 
-          ------------------------
-          Verification code : '.$code.'
-          ------------------------
-
-          To change the password click the below link:
-          https://www.quizproject.tk/change.php?email='.$email.'&hash='.$hash.'
-          '; // Our message above including the link
-                     
-          $headers = 'From:himabindhu1231@gmail.com' . "\r\n";
-          mail($to, $subject, $message, $headers); // Send our email
-        
-          header("location:verify.php?email=".$email);
-        }
-      }       
-    ?>
+  <div style="margin-top:100px" class="container"> 
+    
     <center>
     <!-- title and description -->
     <h3 style="color:#fff">Verification</h3>

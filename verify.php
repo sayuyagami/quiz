@@ -1,3 +1,16 @@
+<?php
+  session_start();
+  $conn=mysqli_connect("localhost", "bindhu","@nime123","login") or die(mysqli_error($conn)); // Connect to database server(localhost) with username and password.
+  $email = $_GET['email'];
+  if(isset($_POST['code']) && !empty($_POST['code'])){
+   $sql = mysqli_query($conn,"SELECT * FROM `info` WHERE `email`='".$email."' ") or die(mysqli_error($conn));
+   $row = mysqli_fetch_array($sql);
+    if($row['code']==$_POST['code']){
+      $_SESSION['username']=$row['username'];
+      header("location:home.php");
+    }
+  }  
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
  
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -52,20 +65,7 @@
 
   <!-- start wrap div -->  
   <div style="margin-top:100px" class="container">   
-    <!-- start php code -->
-    <?php
-      session_start();
-      $conn=mysqli_connect("localhost", "bindhu","@nime123","login") or die(mysqli_error($conn)); // Connect to database server(localhost) with username and password.
-      $email = $_GET['email'];
-      if(isset($_POST['code']) && !empty($_POST['code'])){
-         $sql = mysqli_query($conn,"SELECT * FROM `info` WHERE `email`='".$email."' ") or die(mysqli_error($conn));
-         $row = mysqli_fetch_array($sql);
-          if($row['code']==$_POST['code']){
-              $_SESSION['username']=$row['username'];
-              header("location:home.php");
-          }
-        }   
-       ?>
+    
     <center>
     <div class="alert alert-success alert-dismissible">
      <button type="button" class="close" data-dismiss="alert">&times;</button>
