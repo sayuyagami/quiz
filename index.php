@@ -51,7 +51,7 @@
    </div>
  </nav>
   <?php
-      $conn=mysqli_connect("localhost","bindhu","@nime123","login");
+      $conn = mysqli_connect("localhost","bindhu","@nime123","login");
       if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['subscribe']) && !empty($_POST['subscribe'])){
         $email=$_POST['email'];
   

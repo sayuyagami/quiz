@@ -86,7 +86,7 @@
           https://www.quizproject.tk/change.php?email='.$email.'&hash='.$hash.'
           '; // Our message above including the link
                      
-          $headers = 'From: QuizTime11@gmail.com' . "\r\n";
+          $headers = 'From:himabindhu1231@gmail.com' . "\r\n";
           mail($to, $subject, $message, $headers); // Send our email
         
           header("location:verify.php?email=".$email);
@@ -105,7 +105,7 @@
     </center>
   </div>
 </body>
-<footer style="position:absolute" id="footer" class="w3-center w3-black w3-padding-32">
+<footer style="position:relative" id="footer" class="w3-center w3-black w3-padding-32">
   <i style="color:#c0c0c0">supported by &nbsp;</i><a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;
   <a href="#" class="fa fa-twitter"></a>&nbsp;&nbsp;
   <a href="#" class="fa fa-google"></a>&nbsp;&nbsp;
