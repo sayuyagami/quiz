@@ -75,7 +75,7 @@
 
    </div>
 </div>
-<div style="background-color:#fff" class="col">
+<div style="background-color:#ffffff" class="col">
      <!-- flow_of_work -->
     <section id="flow_of_work" class="home-section py-lg-5">
         
