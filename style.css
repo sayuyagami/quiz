@@ -141,17 +141,10 @@ input[type=submit]:hover {
     margin-top: 0;
   }
 
-  .textbox{
-    top:50px;
-    margin-top: 220px;
-    margin-left: 10px;
-    margin-right: 10px;
+  .col{
+    width:100%;
     box-shadow: 5px 10px 18px #888888;
   }
- 
-  .home-title{
-    margin-top: 230px;
-   } 
 
   .container{
     margin-top: 20px;
@@ -169,23 +162,17 @@ input[type=submit]:hover {
   }
 }
 
-.textbox{
-  position: absolute;
+.col{
   background-color: black;
   color: white;
   padding:10px;
   border-radius: 5px;
   opacity:0.7;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.col{
-  margin-top: 180px;
 }
 
 .bg1{
-  border:1px solid #a442f4;
-  background-color: #a442f4;
+  border:1px solid #912de4;
+  background-color: #912de4;
   padding: 50px;
   color:#fff;
 }
@@ -196,14 +183,14 @@ input[type=submit]:hover {
   color:#fff;
 }
 .bg3{
-  border:1px solid #4286f4;
-  background-color: #4286f4;
+  border:1px solid #3379eb;
+  background-color: #3379eb;
   padding: 50px;
   color:#fff;
 }
 .bg4{
-  border:1px solid #0cb517;
-  background-color: #0cb517;
+  border:1px solid #089712;
+  background-color: #089712;
   padding: 50px;
   color:#fff;
 }
@@ -242,4 +229,6 @@ input[type=submit]:hover {
 
 .bg1:hover,.bg2:hover,.bg3:hover,.bg4:hover{
   box-shadow: 5px 10px 18px #c0c0c0;
+  transform: rotateX(360deg);
+  transition-duration: 2s;
 }

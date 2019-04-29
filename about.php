@@ -64,8 +64,8 @@
       </div>
     </div>
   </div><br> 
- <div class="textbox">
-   <div class="col-lg-10 col-md-8 col-sm-6">
+ <div style="margin-top:-80px" class="col">
+   <div class="col-lg-12 col-md-8 col-sm-8">
     <h3>Quiz</h3>
 
     <p>We provide questions with four options.You have to choose your answer.Quiz follows choose the correct answers format.Try your best score more.There are different course tests you can test your skills by attempting those tests.By testing your skills you can sharp your knowledge and can get a grip of yourself.</p>
@@ -75,40 +75,48 @@
 
    </div>
 </div>
-<div class="col">
+<div style="background-color:#fff" class="col">
      <!-- flow_of_work -->
     <section id="flow_of_work" class="home-section py-lg-5">
         
             <div class="row">
                 <div class="col-sm-12">
-                    <h3 class="home-title main-title-agile text-center">Our process</h3><br><br>
+                    <h3 style="color:#000" class="home-title main-title-agile text-center">Our process</h3><br><br>
                     <div class="row flow_of_work-line">
                         <div class="col-lg-3 col-sm-6">
                             <div class="flow_of_work-item bg1">
                                 <span class="num-color1">1</span>
-                                <i class="fas fa-user-check fa-5x"></i>
-                                <h4>Register your account</h4>
+                                <center>
+                                 <i class="fas fa-user-check fa-5x"></i>
+                                 <h4>Register your account</h4>
+                                </center>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 mt-sm-0 mt-5">
                             <div class="flow_of_work-item bg2">
                                 <span class="num-color2">2</span>
-                                <i class="fas fa-sign-in-alt fa-5x"></i>
-                                <h4>Login for tests</h4>
+                                <center>
+                                 <i class="fas fa-sign-in-alt fa-5x"></i>
+                                 <h4>Login for tests</h4>
+                                <center>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 mt-lg-0 mt-5">
                             <div class="flow_of_work-item bg3">
                                 <span class="num-color3">3</span>
-                                <i class="fas fa-thumbs-up fa-5x"></i>
-                                <h4>start Quiz</h4>
+                                <center>
+                                 <i class="fas fa-thumbs-up fa-5x"></i>
+                                 <h4>start Quiz</h4>
+                                <center>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 mt-lg-0 mt-5">
                             <div class="flow_of_work-item bg4">
                                 <span class="num-color4">4</span>
-                                <i class="fas fa-poll fa-5x"></i>
-                                <h4>get Results</h4>
+                                <center>
+                                 <i class="fas fa-poll fa-5x"></i>
+                                 <h4>get Results</h4>
+                                </center> 
                             </div>
                         </div>
                     </div>
@@ -120,7 +128,7 @@
         <!-- container -->
     </section>
     <!-- //flow_of_work -->
-  </div><br><br><br> 
+  <br><br></div><br><br><br> 
 </body>   
 <footer class="w3-center w3-black w3-padding-32">
     <i style="color:#c0c0c0">supported by &nbsp;</i><a href="#" class="fab fa-facebook-f"></a>&nbsp;&nbsp;
