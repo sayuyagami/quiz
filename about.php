@@ -10,6 +10,7 @@
   
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.png" type="image/icon">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -64,7 +65,7 @@
       </div>
     </div>
   </div><br> 
- <div style="margin-top:-80px" class="col">
+ <div style="margin-top:-80px" class="textbox">
    <div class="col-lg-12 col-md-6 col-sm-6">
     <h3>Quiz</h3>
 
@@ -74,7 +75,7 @@
 
    </div>
 </div>
-<div style="background-color:#fff" class="col">
+<div style="background-color:#fff" class="textbox">
      <!-- flow_of_work -->
     <section id="flow_of_work" class="home-section py-lg-5">
         
@@ -127,7 +128,7 @@
         <!-- container -->
     </section>
     <!-- //flow_of_work -->
-  <br><br></div><br><br><br> 
+  <br><br></div><br><br>
 </body>   
 <footer class="w3-center w3-black w3-padding-32">
     <i style="color:#c0c0c0">supported by &nbsp;</i><a href="#" class="fab fa-facebook-f"></a>&nbsp;&nbsp;

@@ -1,10 +1,9 @@
 <?php
 include('funct.php');
-if(!isset($_SESSION['type']) && empty($_SESSION['type']))
+if(!isset($_SESSION['username']))
 {
  header("location:login.php");
 }else{
-  $uname=$_SESSION['username'];
   include ("connect.php");
 }
 ?>
@@ -16,6 +15,7 @@ if(!isset($_SESSION['type']) && empty($_SESSION['type']))
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="images/logo.png" type="image/icon">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 

@@ -141,11 +141,10 @@ input[type=submit]:hover {
     margin-top: 0;
   }
 
-  .col{
-    margin:10px;
+  .textbox{
     box-shadow: 5px 10px 18px #888888;
   }
-
+  
   .container{
     margin-top: 20px;
     width:90%;
@@ -162,7 +161,8 @@ input[type=submit]:hover {
   }
 }
 
-.col{
+.textbox{
+  margin:10px;
   background-color: black;
   color: white;
   padding:10px;
