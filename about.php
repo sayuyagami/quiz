@@ -3,7 +3,7 @@
 <head>
   <title>Quiz</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -65,17 +65,16 @@
     </div>
   </div><br> 
  <div style="margin-top:-80px" class="col">
-   <div class="col-lg-12 col-md-8 col-sm-8">
+   <div class="col-lg-12 col-md-6 col-sm-6">
     <h3>Quiz</h3>
 
     <p>We provide questions with four options.You have to choose your answer.Quiz follows choose the correct answers format.Try your best score more.There are different course tests you can test your skills by attempting those tests.By testing your skills you can sharp your knowledge and can get a grip of yourself.</p>
 
     <p>Test your skills by attempting the tests we are providing they will help you to know how much do you know about the subject.We will provide the percentage of your particular subjects in a graphical way.Trained students are always welcome to test your knowlege.Try your best to score more.Know more about the subjects by attempting the test,eventhough your not goot at that subject it helps you to gain some knowlege.</p>
 
-
    </div>
 </div>
-<div style="background-color:#ffffff" class="col">
+<div style="background-color:#fff" class="col">
      <!-- flow_of_work -->
     <section id="flow_of_work" class="home-section py-lg-5">
         
