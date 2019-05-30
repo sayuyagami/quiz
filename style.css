@@ -229,6 +229,6 @@ input[type=submit]:hover {
 
 .bg1:hover,.bg2:hover,.bg3:hover,.bg4:hover{
   box-shadow: 5px 10px 18px #c0c0c0;
-  transform: rotateX(360deg);
+  transform: translate3d(150px,100px);
   transition-duration: 2s;
 }
